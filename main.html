@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.31.1/ace.js" integrity="sha512-a9+UssxQ7SRBDf5iwiGlGP1WezkIpdqKKIO37B3ellyQRjdrpj+NuDWme/nJQXkALyVpahGXRpJX7mLTvctyoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label  for="check" class="checkbtn">
+                <i>&#9776;</i>
+            </label>
+            <label class="logo" name="Amigos">ADAM CODES</label>
+            <ul id="ulList">
+                <li><a href="#" class="active">PLAYGROUND</a></li>
+                <li><a id="changeTheme"><ruby>CHANGE&nbsp;THEME<rt>EDITOR</rt></ruby></a></li>
+            </ul>
+        </nav>
+        <main id="main">
+            <div class="menu">
+                <button id="indexEditor" class="active">index.html</button>
+                <button id="styleEditor">style.css</button>
+                <button id="scriptEditor">script.js</button>
+                <button id="tagSuggestions">
+                    Add Tag
+                    <div class="dropdown-content">
+                        <a href="#">div</a>
+                        <a href="#">p</a>
+                        <a href="#">a</a>
+                        <a href="#">h1</a>
+                        <a href="#">h2</a>
+                        <a href="#">h3</a>
+                        <a href="#">h4</a>
+                        <a href="#">h5</a>
+                        <a href="#">h6</a>
+                        <a href="#">button</a>
+                        <a href="#">input</a>
+                        <a href="#">span</a>
+                        <a href="#">ul</a>
+                        <a href="#">li</a>
+                        <a href="#">ol</a>
+                        <a href="#">img</a>
+                    </div>
+                </button>
+                <button id="attributeSuggestions">
+                    Add Attribute
+                    <div class="dropdown-content">
+                        <a href="#">id</a>
+                        <a href="#">class</a>
+                        <a href="#">name</a>
+                        <a href="#">value</a>
+                        <a href="#">type</a>
+                        <a href="#">for</a>
+                    </div>
+                </button>
+            </div>
+            <div id="editorContainer" class="editorContainer">
+                <div class="htmlEditor" id="htmlEditor"></div>
+                <div class="cssEditor" id="cssEditor"></div>
+                <div class="jsEditor" id="jsEditor"></div>
+            </div>
+            <iframe class="output" id="output" style="border: 5px solid rgb(0, 0, 0);"></iframe>
+        </main>
+        <script src="mainScript.js"></script>
+    </header>
+</body>
+</html>
